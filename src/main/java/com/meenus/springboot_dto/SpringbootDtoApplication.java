@@ -4,10 +4,12 @@ import com.meenus.springboot_dto.model.Location;
 import com.meenus.springboot_dto.model.User;
 import com.meenus.springboot_dto.repository.LocationRepository;
 import com.meenus.springboot_dto.repository.UserRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class SpringbootDtoApplication implements CommandLineRunner {
@@ -19,6 +21,11 @@ public class SpringbootDtoApplication implements CommandLineRunner {
 	private UserRepository userRepository;
 	@Autowired
 	private LocationRepository locationRepository;
+
+	@Bean
+	public ModelMapper modelMapper(){
+		return new ModelMapper();
+	}
 	@Override
 	public void run(String... args) throws Exception {
     Location location=new Location();
