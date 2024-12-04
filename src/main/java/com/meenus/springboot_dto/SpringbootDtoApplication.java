@@ -33,7 +33,7 @@ public class SpringbootDtoApplication implements CommandLineRunner {
     user1.setLastName("rooney");
 	user1.setEmail("lots@lmal.com");
 	user1.setLocation(location);
-	user1.setPassword("hirooney");
+	user1.setPassword("");
 	userRepository.save(user1);
 
 		User user2=new User();
@@ -41,7 +41,7 @@ public class SpringbootDtoApplication implements CommandLineRunner {
 		user2.setLastName("rooney");
 		user2.setLocation(location);
 		user2.setEmail("lo4ts@lmal.com");
-		user2.setPassword("hireooney");
+		user2.setPassword("");
 		userRepository.save(user2);
 
 	}
